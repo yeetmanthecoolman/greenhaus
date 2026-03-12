@@ -28,8 +28,8 @@ build-backend = "poetry.core.masonry.api"
 
 [project.urls]
 homepage = "https://mcpasd.k12.wi.us/"
-repository = "https://github.com/sp29174/GreenhousePython"
-documentation = "https://github.com/sp29174/GreenhousePython/wiki"
+repository = "https://github.com/yeetmanthecoolman/greenhaus"
+documentation = "https://github.com/yeetmanthecoolman/greenhaus/wiki"
 
 [tool.poetry]
 package-mode = true

@@ -56,16 +56,16 @@ try:
 	x.read()
 	x.release()#Fix bug where we crash because there's no camera
 except ImportError:
-	from greenhousepython.nonsense import cv2
+	from greenhaus.nonsense import cv2
 try:
 	import mcp3008 as MCP
 	from mcp3008 import MCP3008
 except ImportError as e:
 	if attrs["is_debug"]:
 		print("WARNING: " + str(e))
-	from greenhousepython.nonsense import MCP, MCP3008
+	from greenhaus.nonsense import MCP, MCP3008
 try:
-	from greenhousepython.gpio_wrapper import gpio as g
+	from greenhaus.gpio_wrapper import gpio as g
 	GPIO = g()
 except Exception as e:
 	if attrs["is_debug"]:
@@ -75,7 +75,7 @@ except Exception as e:
 	except ImportError as e:
 		if attrs["is_debug"]:
 			print("WARNING: " + str(e))
-		from greenhousepython.nonsense import GPIO
+		from greenhaus.nonsense import GPIO
 import sys
 import asyncio
 try:
@@ -489,3 +489,4 @@ if attrs["is_debug"]:
 	print(__name__)
 if __name__ == "__main__":
 	app()
+

@@ -77,17 +77,11 @@ except ImportError as e:
 		print("WARNING: " + str(e))
 	from greenhaus.nonsense import MCP, MCP3008
 try:
-	from greenhaus.gpio_wrapper import gpio as g
-	GPIO = g()
-except Exception as e:
+	import RPi.GPIO as GPIO
+except ImportError as e:
 	if attrs["is_debug"]:
 		print("WARNING: " + str(e))
-	try:
-		import RPi.GPIO as GPIO
-	except ImportError as e:
-		if attrs["is_debug"]:
-			print("WARNING: " + str(e))
-		from greenhaus.nonsense import GPIO
+	from greenhaus.nonsense import GPIO
 import sys
 import asyncio
 try:
@@ -501,5 +495,6 @@ if attrs["is_debug"]:
 	print(__name__)
 if __name__ == "__main__":
 	app()
+
 
 

@@ -96,6 +96,6 @@ Contact:
 🤝 Contributing
 Fork the repo, create a branch, and submit a PR! Start with "good first issues" and/or "help wanted". Let's grow this project together 🌱
 
-License: MIT
+License: AGPLv3
 
 *Usually.

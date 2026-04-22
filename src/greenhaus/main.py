@@ -157,14 +157,14 @@ def change_setting(key : Annotated[str, Argument(help="The exact name of the set
 	if ["file_name_prefix"].count(key) != 0:
 		print("This part needs logic for automatically renaming files, which I haven't written yet. Sorry!")
 		assert False
-	elif ["interval","camera_inteval","longitude","latitude","elevation"].count(key) != 0 or key.startswith("control_parameter") or key.startswith("deadband"):
+	elif ["interval","camera_interval","longitude","latitude","elevation"].count(key) != 0 or key.startswith("control_parameter") or key.startswith("deadband"):
 		try:
 			new_val = float(value)
 		except ValueError:
 			print("We kinda need these to be floats.")
 			return None
 	elif ["lights","pump_pin","beds","last_file_number"].count(key) != 0 or key.startswith("light_pin") or key.startswith("water_pin"):
-		if ["lights","beds"].count(setting_to_change) != 0:
+		if ["lights","beds"].count(key) != 0:
 			print("When these are changed, the GUI needs to be rearranged, which I haven't coded yet.")
 			assert False
 		try:
@@ -183,7 +183,7 @@ def change_setting(key : Annotated[str, Argument(help="The exact name of the set
 	else:
 		print("Confusion noise: '" + key + "' is not actually a thing.")
 		return None
-	attrs[setting_to_change] = new_val
+	attrs[key] = new_val
 	attrs.sync()
 
 #control pumps using hysteresis based on the values returned from the MCP

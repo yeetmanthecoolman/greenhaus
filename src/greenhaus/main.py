@@ -56,8 +56,8 @@ if not attrs:
 def get_file_name(file_number):
     global attrs
     if (file_number == 0):
-        return "../../images/placeholder.jpg"
-    return "../../images/" + attrs["file_name_prefix"] + str(file_number) + ".jpg"
+        return "/var/lib/greenhaus/images/placeholder.jpg"
+    return "/var/lib/greenhaus/images/" + attrs["file_name_prefix"] + str(file_number) + ".jpg"
 
 # Initialization ****************************************************************************************
 

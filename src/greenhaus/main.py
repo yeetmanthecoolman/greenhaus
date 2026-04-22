@@ -202,7 +202,7 @@ def water():
 				GPIO.output(attrs["water_pin" + str(x)], GPIO.LOW)
 				attrs["bed" + str(x)] = False
 				attrs.sync()
-			if (attrs["bed" + str(x)] == "True"):
+			if attrs["bed" + str(x)]:
 				run_pump = True#If any bed is on, then run the pump.
 		if run_pump:
 			GPIO.output(int(attrs["pump_pin"]), GPIO.HIGH)

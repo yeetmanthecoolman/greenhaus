@@ -19,7 +19,7 @@
 from typer import Typer, Argument, Option
 import shelve
 app = Typer(rich_markup_mode="rich")
-attrs = shelve.open("cfg.txt", writeback = True)
+attrs = shelve.open("/var/lib/greenhaus/cfg.d", writeback = True)
 if not attrs:
 	attrs["last_file_number"] = 0
 	attrs["camera_interval"] = 3600

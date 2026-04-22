@@ -196,7 +196,7 @@ def water():
 			moisture = mcp(1)[x]#normalize values to one using mcp3008.MCP3008 (see https://github.com/luxedo/RPi_mcp3008/blob/master/mcp3008.py#L73)
 			if (not attrs["bed" + str(x)]) and (moisture < attrs["control_parameter" + str(x)] - (attrs["deadband" + str(x)]/2)):#this if-else is basically an inelegant hysteresis controller. On the other hand, we're being rewarded for not destroying the pump, not for elegantly destroying the pump.
 				GPIO.output(int(attrs["water_pin" + str(x)]), GPIO.HIGH)
-				attrs["bed" + str(x)] = "True"
+				attrs["bed" + str(x)] = True
 				attrs.sync()
 			elif attrs["bed" + str(x)] and (moisture > attrs["control_parameter" + str(x)] + (attrs["deadband" + str(x)]/2)):
 				GPIO.output(attrs["water_pin" + str(x)], GPIO.LOW)

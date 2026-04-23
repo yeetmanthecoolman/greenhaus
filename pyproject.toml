@@ -2,7 +2,7 @@
 
 [project]
 name = "greenhaus"
-version = "0.3.2"
+version = "0.3.3"
 description = "It's a python thing that automates a greenhouse."
 license = "AGPL-3.0"
 requires-python = ">=3.10,<4.0"#pygobject fails to install on 3.9

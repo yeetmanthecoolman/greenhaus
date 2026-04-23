@@ -47,7 +47,7 @@ This project integrates sensors, relays, a GUI, and camera control to create a f
 		cd ~/ && pipx install -vvv poetry && cd ./greenhaus && poetry install -vvv --all-groups --all-extras --compile && cd ./src/greenhaus && poetry run greenhaus start-gui
 
 	😵‍💫Need a wheel? Conveniently, I made that real simple:
-		cd ~/GreenhousePython && poetry build -f wheel
+		cd ~/greenhaus && poetry build -f wheel
 	
 	💡When you want to run the script again, you can run:
 		cd ~/ && sudo apt update && sudo apt full-upgrade && cd ./greenhaus && poetry update -vvv && cd ./src/greenhaus && poetry run greenhaus start-gui

@@ -20,7 +20,7 @@ from typer import Typer, Argument, Option
 import shelve
 import os
 app = Typer(rich_markup_mode="rich")
-os.makedirs(r"/var/lib/greenhaus/images", exist_ok = True)
+os.makedirs(r"/var/lib/greenhaus/images/", exist_ok = True)
 os.chdir(r"/var/lib/greenhaus/")
 attrs = shelve.open("cfg.d", writeback = True)
 if not attrs:

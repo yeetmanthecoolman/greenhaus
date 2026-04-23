@@ -17,7 +17,7 @@ greenhaus = "greenhaus.main:app"
 
 [project.optional-dependencies]
 camera = ["opencv-python"]
-gpio = [ "mcp3008>=1.0.0", "RPi.GPIO" ]#This group's days are numbered.
+gpio = [ "mcp3008>=1.0.1", "RPi.GPIO" ]#This group's days are numbered.
 dev = [ "wheel", "poetry>=2.0.0" ]
 gui = [ "PyGObject>=3.54.0" ]
 

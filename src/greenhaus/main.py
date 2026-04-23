@@ -20,7 +20,7 @@ from typer import Typer, Argument, Option
 import shelve
 import os
 app = Typer(rich_markup_mode="rich")
-os.makedirs("/var/lib/greenhaus",exist_ok = True)
+os.makedirs(r"/var/lib/greenhaus", exist_ok = True)
 attrs = shelve.open(os.path.join("/var/lib/greenhaus/cfg.d"), writeback = True)
 if not attrs:
 	attrs["last_file_number"] = 0

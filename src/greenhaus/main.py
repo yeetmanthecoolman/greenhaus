@@ -20,8 +20,8 @@ from typer import Typer, Argument, Option
 import shelve
 import os
 app = Typer(rich_markup_mode="rich")
-os.makedirs(r"/var/lib/greenhaus", exist_ok = True)
-attrs = shelve.open(os.path.join("/var/lib/greenhaus/cfg.d"), writeback = True)
+os.makedirs(r"/var/lib/greenhaus/images", exist_ok = True)
+attrs = shelve.open(os.path.join(r"/var/lib/greenhaus/cfg.d"), writeback = True)
 if not attrs:
 	attrs["last_file_number"] = 0
 	attrs["camera_interval"] = 3600

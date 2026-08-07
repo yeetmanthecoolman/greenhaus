@@ -19,7 +19,7 @@ greenhaus = "greenhaus.main:app"
 camera = ["opencv-python"]
 gpio = [ "mcp3008>=1.0.0", "RPi.GPIO" ]#This group's days are numbered.
 dev = [ "wheel", "poetry>=2.0.0" ]
-gui = [ "PyGObject>=3.54.0" ]
+gui = [ "PyGObject>=3.56.2" ]
 
 [build-system]
 requires = ["poetry-core>2.0.0,<3.0.0"]
